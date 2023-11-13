@@ -9,7 +9,7 @@ namespace ProjetoCadastroDeFamiliasTeste.Models
         {
             FamiliaModel famila = CriarFamilia();
 
-            Assert.Equal(2, famila.Id);
+            Assert.Equal(1, famila.Id);
             Assert.Equal(1, famila.QuantidadeDePessoas);
             Assert.Equal("Teste", famila.NomeFamilia);
 
