@@ -14,8 +14,6 @@ jobs:
 
      - name: Sync branches
        run: |
-         git remote update
-         git fetch 
-         git checkout --track origin/homologacao
-         git merge master --no-edit
-         git push origin origin/homologacao
+         git clone --branch master --single-branch $CI_REPOSITORY_URL .  # Clona o repositório da master
+         git checkout -b homologacao  # Cria e muda para a branch homologacao
+         git push --set-upstream origin homologacao  # Empurra a nova branch de homologacao
