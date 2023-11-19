@@ -14,6 +14,8 @@ jobs:
 
      - name: Sync branches
        run: |
-         git checkout origin/homologacao
+         git remote update
+         git fetch 
+         git checkout --track origin/homologacao
          git merge master --no-edit
          git push origin origin/homologacao
