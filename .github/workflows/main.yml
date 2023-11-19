@@ -1,0 +1,19 @@
+name: Sync branches
+
+on:
+ push:
+   branches:
+     - master
+
+jobs:
+ sync:
+   runs-on: ubuntu-latest
+   steps:
+     - name: Checkout code
+       uses: actions/checkout@v2
+
+     - name: Sync branches
+       run: |
+         git checkout homologacao
+         git merge master --no-edit
+         git push origin homologacao
