@@ -14,6 +14,7 @@ jobs:
 
      - name: Sync branches
        run: |
+         rm -rf homologacao  # Remove o diretório homologacao, se existir
          git clone --branch master --single-branch $CI_REPOSITORY_URL .  # Clona o repositório da master
          git checkout -b homologacao  # Cria e muda para a branch homologacao
          git push --set-upstream origin homologacao  # Empurra a nova branch de homologacao
