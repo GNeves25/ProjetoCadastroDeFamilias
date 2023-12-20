@@ -11,7 +11,7 @@ namespace ProjetoCadastroDeFamiliasTeste.Models
 
             Assert.Equal(1, famila.Id);
             Assert.Equal(1, famila.QuantidadeDePessoas);
-            Assert.Equal("Teste 1", famila.NomeFamilia);
+            Assert.Equal("Teste 2", famila.NomeFamilia);
 
         }
 
@@ -21,7 +21,7 @@ namespace ProjetoCadastroDeFamiliasTeste.Models
             {
                 Id = 1,
                 QuantidadeDePessoas = 1,
-                NomeFamilia = "Teste 1"
+                NomeFamilia = "Teste 2"
             };
         }
     }
